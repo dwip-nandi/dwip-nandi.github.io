@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwip Nandi | Portfolio Hub</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="sidebar">
+        <div class="sidebar-header">
+            <h3>PORTFOLIO</h3>
+        </div>
+
+        <ul class="list-unstyled components">
+            <li class="active"><a href="#home"><i class="fas fa-user-circle"></i> My Profile</a></li>
+            <li><a href="#about"><i class="fas fa-id-card"></i> About Me</a></li>
+            <li><a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a></li>
+            <li><a href="#skills"><i class="fas fa-brain"></i> Skills</a></li>
+            <li><a href="#resume"><i class="fas fa-file-pdf"></i> Resume</a></li>
+            <li><a href="#contact"><i class="fas fa-paper-plane"></i> Contact Me</a></li>
+            <li><a href="#browsen"><i class="fas fa-share-nodes"></i> Browsen Social</a></li>
+            <li><a href="#achievements"><i class="fas fa-trophy"></i> Achievement</a></li>
+            <li><a href="#ideas"><i class="fas fa-lightbulb"></i> Idea Section</a></li>
+            <li><a href="#gallery"><i class="fas fa-images"></i> Photo Gallery</a></li>
+            <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+        </ul>
+    </nav>
+
+<div id="content">
+        <div class="top-navbar shadow-sm">
+            <div id="sidebarCollapse" class="toggle-icon">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="brand-name ms-3">DWIP NANDI</div>
+
+            <div class="ms-auto logo-section">
+                <img src="DwipNandi.png" alt="Logo" class="top-logo">
+            </div>
+        </div>
+<!-- -----------------------my profile section---------------------- -->
+<section id="home" class="p-4">
+    <!-- Slider Section -->
+    <!-- <div class="slider-container shadow-lg">
+        <div id="achievementCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://via.placeholder.com/1200x500/198754/ffffff?text=Achievement+1" class="d-block w-100" alt="Achievement">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://via.placeholder.com/1200x500/157347/ffffff?text=Achievement+2" class="d-block w-100" alt="Work">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#achievementCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#achievementCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+        </div>
+    </div> -->
+   <div class="slider-container shadow-lg">
+    <div id="achievementCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            
+            <div class="carousel-item active">
+                <picture>
+                    <source media="(max-width: 576px)" srcset="images/achievement1-mobile.png">
+                    <source media="(max-width: 992px)" srcset="images/achievement1-tablet.png">
+                    <img src="images/achivement1-dextop.png" class="d-block w-100 slider-img" alt="Achievement 1">
+                </picture>
+            </div>
+
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 576px)" srcset="images/achievement2-mobile.png">
+                    <source media="(max-width: 992px)" srcset="images/achievement2-tablet.png">
+                    <img src="images/achivement2-dextop.png" class="d-block w-100 slider-img" alt="Achievement 2">
+                </picture>
+            </div>
+            <div class="carousel-item">
+                <picture>
+                    <source media="(max-width: 576px)" srcset="images/achievement3-mobile.png">
+                    <source media="(max-width: 992px)" srcset="images/achievement3-tablet.png">
+                    <img src="images/achivement3-dextop.png" class="d-block w-100 slider-img" alt="Achievement 2">
+                </picture>
+            </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#achievementCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#achievementCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+    </div>
+    <!-- Quick Statistics Section (নতুন যোগ করা হয়েছে) -->
+    <div class="stats-wrapper mt-4">
+        <div class="row g-3 justify-content-center">
+            <div class="col-md-4 col-sm-6">
+                <div class="stat-box text-center shadow-sm">
+                    <i class="fas fa-tasks text-success mb-2"></i>
+                    <h2 class="counter" data-target="5">0</h2>
+                    <p>Projects Completed</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="stat-box text-center shadow-sm">
+                    <i class="fas fa-code text-success mb-2"></i>
+                    <h2 class="counter" data-target="800">0</h2>
+                    <p>Solved Problems</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+                <div class="stat-box text-center shadow-sm">
+                    <i class="fas fa-laptop-code text-success mb-2"></i>
+                    <h2 class="counter" data-target="3">0</h2>
+                    <p>Years Learning Experience</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Profile Card Section -->
+    <div class="profile-card text-center mt-4 p-4 bg-white rounded shadow-sm">
+        <h1 class="fw-bold text-success">Dwip Nandi</h1>
+        <p class="text-muted"> Student of ICE, University of Rajshahi.</p>
+        <div class="social-icons">
+            <a href="https://github.com/dwip-nandi" class="mx-2"><i class="fab fa-github"></i></a>
+            <a href="#" class="mx-2"><i class="fab fa-linkedin"></i></a>
+            <a href="#" class="mx-2"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+</section>
+<!-- -----------------------About me section------------------------ -->
+<section id="about" class="about-me-section  p-4">
+    <h2 class="section-title">About Me</h2>
+
+    <div class="custom-profile-container shadow-sm">
+        <div class="row g-0 align-items-center">
+            
+            <div class="col-md-5 text-center p-4">
+                <div class="about-image-wrapper">
+                    <img src="images/my.jpg" alt="Dwip Nandi" class="img-fluid about-img">
+                </div>
+            </div>
+
+            <div class="col-md-7">
+                <div class="about-content">
+                    <h1 class="fw-bold main-name">Dwip Nandi</h1>
+                    <h5 class="sub-title mb-3">A Bit About Me</h5>
+                    
+                    <p id="about-text" class="about-description text-muted">
+                        C++, PHP, and Laravel are my main focus. I have solved 300+ problems and am passionate about data structures and algorithms.
+                    </p>
+
+                    <div class="about-buttons d-flex flex-wrap gap-2 mt-4">
+                        <div class="info-btn active" onclick="showInfo('personal', this)">Personal</div>
+                        <div class="info-btn" onclick="showInfo('programming', this)">Programming</div>
+                        <div class="info-btn" onclick="showInfo('research', this)">Research</div>
+                        <div class="info-btn" onclick="showInfo('dev', this)">Development</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ------------------ My projects Section ----------------- -->
+<section id="projects" class="p-4">
+        <h2 class="section-title p-3">My Projects</h2>
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 project-card shadow-sm border-0">
+                    <div class="project-img-container">
+                        <img src="images/project1.png" class="card-img-top" alt="Store Management System">
+                        <div class="project-overlay">
+                             <span class="badge bg-success">PHP & MySQL</span>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <h4 class="card-title fw-bold text-dark">Store Management System</h4>
+                        <div class="tech-stacks mb-3">
+                            <span class="stack-item">Raw PHP</span>
+                            <span class="stack-item">MySQL</span>
+                            <span class="stack-item">Bootstrap</span>
+                        </div>
+                        <p class="card-text text-muted">একটি পূর্ণাঙ্গ ইনভেন্টরি সলিউশন যা ছোট দোকানের স্টক এবং হিসাব ম্যানেজ করতে সাহায্য করে।</p>
+                        <a href="#" class="info-btn live-btn d-inline-block mt-2">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card h-100 project-card shadow-sm border-0">
+                    <div class="project-img-container">
+                        <img src="images/project2.png" class="card-img-top" alt="AI Study Lab">
+                        <div class="project-overlay">
+                             <span class="badge bg-success">Laravel & AI</span>
+                        </div>
+                    </div>
+                    <div class="card-body p-4">
+                        <h4 class="card-title fw-bold text-dark">AI Study Lab</h4>
+                        <div class="tech-stacks mb-3">
+                            <span class="stack-item">Laravel</span>
+                            <span class="stack-item">Tailwind CSS</span>
+                            <span class="stack-item">Python API</span>
+                        </div>
+                        <p class="card-text text-muted">ইঞ্জিনিয়ারিং স্টুডেন্টদের জন্য একটি ভয়েস-অ্যাসিস্টেড ল্যাব প্ল্যাটফর্ম যা পড়া সহজ করে তোলে।</p>
+                        <a href="#" class="info-btn live-btn d-inline-block mt-2">Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+</section>
+<!-- ---------------------------my skills section---------------------  -->
+<section id="skills" class="p-4">
+
+        <h2 class="section-title p-3">Skills & Tools</h2>
+
+        <div class="row g-4 justify-content-center">
+            <div class="col-6 col-md-3">
+                <div class="skill-card shadow">
+                    <i class="fas fa-copyright skill-icon"></i>
+                    <h5 class="skill-name">C Programming</h5>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="skill-card shadow">
+                    <i class="fas fa-code skill-icon"></i>
+                    <h5 class="skill-name">C++ Programming</h5>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="skill-card shadow">
+                    <i class="fab fa-html5 skill-icon"></i>
+                    <h5 class="skill-name">HTML5</h5>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="skill-card shadow">
+                    <i class="fab fa-css3-alt skill-icon"></i>
+                    <h5 class="skill-name">CSS3</h5>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="skill-card shadow">
+                    <i class="fab fa-php skill-icon"></i>
+                    <h5 class="skill-name">PHP & Laravel</h5>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="skill-card shadow">
+                    <i class="fab fa-js skill-icon"></i>
+                    <h5 class="skill-name">JavaScript</h5>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="skill-card shadow">
+                    <i class="fas fa-database skill-icon"></i>
+                    <h5 class="skill-name">MySQL</h5>
+                </div>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <div class="skill-card shadow">
+                    <i class="fab fa-git-alt skill-icon"></i>
+                    <h5 class="skill-name">Git</h5>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- -----------------------------------------resume section------------------ -->
+<section id="resume" class="p-4">
+        <h2 class="section-title p-3">Resume</h2>
+
+        <div class="row g-5">
+            <!-- Education Column -->
+            <div class="col-md-6">
+                <h3 class="mb-4" style="color: #198754;"><i class="fas fa-graduation-cap me-2"></i> Education</h3>
+                
+                <!-- Education Card 1 -->
+                <div class="resume-card mb-4 shadow-sm">
+                    <span class="resume-date">2021 - Present</span>
+                    <h5 class="resume-degree">B.Sc. in Computer Science</h5>
+                    <p class="resume-institute">Rajshahi University</p>
+                    <p class="resume-text">বর্তমানে কম্পিউটার সায়েন্স এন্ড ইঞ্জিনিয়ারিং বিভাগে অধ্যয়নরত। বিভিন্ন টেকনিক্যাল প্রজেক্ট এবং রিসার্চের সাথে যুক্ত।</p>
+                </div>
+
+                <!-- Education Card 2 -->
+                <div class="resume-card shadow-sm">
+                    <span class="resume-date">2018 - 2020</span>
+                    <h5 class="resume-degree">Higher Secondary Certificate</h5>
+                    <p class="resume-institute">Your College Name</p>
+                    <p class="resume-text">বিজ্ঞান বিভাগ থেকে জিপিএ ৫.০০ পেয়ে উত্তীর্ণ।</p>
+                </div>
+            </div>
+
+            <!-- Experience Column -->
+            <div class="col-md-6">
+                <h3 class="mb-4" style="color: #198754;"><i class="fas fa-briefcase me-2"></i> Experience</h3>
+                
+                <!-- Experience Card 1 -->
+                <div class="resume-card mb-4 shadow-sm">
+                    <span class="resume-date">2024 - Active</span>
+                    <h5 class="resume-degree">Web Developer (Project Based)</h5>
+                    <p class="resume-institute">Freelance / Local Clients</p>
+                    <p class="resume-text">PHP, MySQL এবং আধুনিক ফ্রন্টএন্ড টুলস ব্যবহার করে বিভিন্ন ডাইনামিক ওয়েবসাইট তৈরি করছি।</p>
+                </div>
+
+                <!-- Experience Card 2 -->
+                <div class="resume-card shadow-sm">
+                    <span class="resume-date">2023 - 2024</span>
+                    <h5 class="resume-degree">Junior Developer Trainee</h5>
+                    <p class="resume-institute">Tech Solutions Lab</p>
+                    <p class="resume-text">সফটওয়্যার ডেভেলপমেন্ট লাইফসাইকেল এবং টিম কোলাবরেশন সম্পর্কে বাস্তব অভিজ্ঞতা অর্জন করেছি।</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Download CV Button -->
+        <div class="text-center mt-5">
+            <a href="#" class="btn btn-resume-download shadow">
+                <i class="fas fa-download me-2"></i> Download CV
+            </a>
+        </div>
+</section>
+<!-- --------------------------contact me section--------------- -->
+<section id="contact" class="p-4" style="background-color: #f0f4f2;">
+        <h2 class="section-title p-3 ">Contact Me</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <!-- Contact Card with Stack Effect -->
+                <div class="contact-card shadow-sm">
+                    <form action="#" method="POST" class="contact-form">
+                        <div class="row g-4">
+                            <!-- Name Field -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Full Name</label>
+                                    <input type="text" class="form-control" placeholder="Enter your name" required>
+                                </div>
+                            </div>
+                            <!-- Email Field -->
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="form-label">Email Address</label>
+                                    <input type="email" class="form-control" placeholder="Enter your email" required>
+                                </div>
+                            </div>
+                            <!-- Subject Field -->
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label">Subject</label>
+                                    <input type="text" class="form-control" placeholder="What is this about?">
+                                </div>
+                            </div>
+                            <!-- Message Field -->
+                            <div class="col-12">
+                                <div class="form-group">
+                                    <label class="form-label">Your Message</label>
+                                    <textarea class="form-control" rows="5" placeholder="Write your message here..." required></textarea>
+                                </div>
+                            </div>
+                            <!-- Submit Button -->
+                            <div class="col-12 text-center">
+                                <button type="submit" class="btn btn-contact-send">
+                                    <i class="fas fa-paper-plane me-2"></i> Send Message
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- --------------------------social section------------------ -->
+ <!-- Social Section -->
+<section id="browsen" class="p-4 py-5" style="background-color: #ffffff;">
+        <h2 class="section-title p-3 ">Browsen Social</h2>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Facebook -->
+            <div class="col-6 col-md-3 col-lg-2">
+                <a href="#" class="social-card-link">
+                    <div class="social-card shadow-sm" ontouchstart="">
+                        <i class="fab fa-facebook-f social-icon"></i>
+                        <span class="social-name">Facebook</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- GitHub -->
+            <div class="col-6 col-md-3 col-lg-2">
+                <a href="#" class="social-card-link">
+                    <div class="social-card shadow-sm" ontouchstart="">
+                        <i class="fab fa-github social-icon"></i>
+                        <span class="social-name">GitHub</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- LinkedIn -->
+            <div class="col-6 col-md-3 col-lg-2">
+                <a href="#" class="social-card-link">
+                    <div class="social-card shadow-sm" ontouchstart="">
+                        <i class="fab fa-linkedin-in social-icon"></i>
+                        <span class="social-name">LinkedIn</span>
+                    </div>
+                </a>
+            </div>
+
+            <!-- WhatsApp -->
+            <div class="col-6 col-md-3 col-lg-2">
+                <a href="#" class="social-card-link">
+                    <div class="social-card shadow-sm" ontouchstart="">
+                        <i class="fab fa-whatsapp social-icon"></i>
+                        <span class="social-name">WhatsApp</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+</section>
+<!-- --------------------------Achievement Section-------------------- -->
+<section id="achievements" class="p-4 py-5" style="background-color: #f0f4f2;">
+        <h2 class="section-title p-3 mb-5">Achievements</h2>
+        <div class="row g-4 justify-content-center">
+            <!-- Achievement 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="achievement-card shadow-sm" ontouchstart="">
+                    <div class="achievement-icon-box">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h5 class="achievement-title">Best Project Award</h5>
+                    <p class="achievement-desc">রাজশাহী বিশ্ববিদ্যালয় আইসিই বিভাগ থেকে সেরা প্রজেক্টের স্বীকৃতি অর্জন।</p>
+                    <span class="achievement-date">May 2024</span>
+                </div>
+            </div>
+
+            <!-- Achievement 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="achievement-card shadow-sm" ontouchstart="">
+                    <div class="achievement-icon-box">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <h5 class="achievement-title">Programming Contest</h5>
+                    <p class="achievement-desc">আন্তঃবিভাগীয় প্রোগ্রামিং প্রতিযোগিতায় শীর্ষ ১০-এর মধ্যে অবস্থান।</p>
+                    <span class="achievement-date">Dec 2023</span>
+                </div>
+            </div>
+
+            <!-- Achievement 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="achievement-card shadow-sm" ontouchstart="">
+                    <div class="achievement-icon-box">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h5 class="achievement-title">Full Stack Certification</h5>
+                    <p class="achievement-desc">লার্যাভেল এবং রিয়্যাক্ট জেএস-এর ওপর প্রফেশনাল সার্টিফিকেট অর্জন।</p>
+                    <span class="achievement-date">Feb 2024</span>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- ------------------Idea Section----------------- -->
+<section id="ideas" class="p-4 py-5" style="background-color: #ffffff;">
+        <h2 class="section-title p-3 mb-5">Creative Ideas</h2>
+        <div class="row g-4 justify-content-center">
+            <!-- Idea 1 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="idea-card shadow-sm" ontouchstart="">
+                    <div class="idea-badge">New Concept</div>
+                    <h5 class="idea-title">VR E-commerce Experience</h5>
+                    <p class="idea-desc">ভার্চুয়াল রিয়েলিটি ব্যবহার করে অনলাইন শপিং অভিজ্ঞতাকে আরও বাস্তবসম্মত করার একটি পরিকল্পনা।</p>
+                    <div class="idea-footer">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Idea 2 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="idea-card shadow-sm" ontouchstart="">
+                    <div class="idea-badge">Research</div>
+                    <h5 class="idea-title">Bengali Sign Language AI</h5>
+                    <p class="idea-desc">কম্পিউটার ভিশন ব্যবহার করে বাংলা ইশারা ভাষাকে সরাসরি টেক্সটে রূপান্তর করার আইডিয়া।</p>
+                    <div class="idea-footer">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Idea 3 -->
+            <div class="col-md-6 col-lg-4">
+                <div class="idea-card shadow-sm" ontouchstart="">
+                    <div class="idea-badge">Agro Tech</div>
+                    <h5 class="idea-title">Smart Poultry Management</h5>
+                    <p class="idea-desc">আইওটি (IoT) এবং সফটওয়্যার ব্যবহার করে পোল্ট্রি খামারের উৎপাদন ও ব্যবস্থাপনা অটোমেশন করা।</p>
+                    <div class="idea-footer">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- ---------------------gallery section----------- -->
+<section id="gallery" class="p-4 py-5" style="background-color: #ffffff;">
+        <h2 class="section-title p-3 mb-5">Moments & Gallery</h2>
+
+        <div class="row g-4 justify-content-center">
+            <!-- Photo 1 -->
+            <div class="col-sm-6 col-md-4">
+                <div class="gallery-card shadow-sm" ontouchstart="">
+                    <div class="gallery-img-box">
+                        <img src="your-photo-1.jpg" alt="Campus Life" class="img-fluid">
+                    </div>
+                    <div class="gallery-info">
+                        <h6 class="gallery-title">Campus Life</h6>
+                        <p class="gallery-desc">University of Rajshahi</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo 2 -->
+            <div class="col-sm-6 col-md-4">
+                <div class="gallery-card shadow-sm" ontouchstart="">
+                    <div class="gallery-img-box">
+                        <img src="your-photo-2.jpg" alt="Research Work" class="img-fluid">
+                    </div>
+                    <div class="gallery-info">
+                        <h6 class="gallery-title">Research Lab</h6>
+                        <p class="gallery-desc">ICE Dept Work</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Photo 3 -->
+            <div class="col-sm-6 col-md-4">
+                <div class="gallery-card shadow-sm" ontouchstart="">
+                    <div class="gallery-img-box">
+                        <img src="your-photo-3.jpg" alt="Tech Event" class="img-fluid">
+                    </div>
+                    <div class="gallery-info">
+                        <h6 class="gallery-title">Tech Fest</h6>
+                        <p class="gallery-desc">Project Presentation</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- -----------------setting section---------------- -->
+<section id="settings" class="p-4 py-5" style="background-color: #f0f4f2;">
+        <h2 class="section-title p-3 mb-5">Personalize Settings</h2>
+
+        <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <div class="settings-card shadow-sm" ontouchstart="">
+                    <div class="settings-list">
+                        
+                        <!-- Dark Mode Toggle -->
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <i class="fas fa-moon"></i>
+                                <span>Dark Mode</span>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input custom-switch" type="checkbox" id="darkModeToggle">
+                            </div>
+                        </div>
+
+                        <hr class="setting-divider">
+
+                        <!-- Language Preference -->
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <i class="fas fa-language"></i>
+                                <span>Language</span>
+                            </div>
+                            <select class="form-select setting-select">
+                                <option value="en">English</option>
+                                <option value="bn" selected>বাংলা</option>
+                            </select>
+                        </div>
+
+                        <hr class="setting-divider">
+
+                        <!-- Animation Setting -->
+                        <div class="setting-item">
+                            <div class="setting-info">
+                                <i class="fas fa-running"></i>
+                                <span>Animations</span>
+                            </div>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input custom-switch" type="checkbox" id="animToggle" checked>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+<!-- Unique Footer Card -->
+<div class="container_footer pb-2">
+    <footer id="footer" class="footer-card shadow-sm">
+        <div class="row align-items-center">
+            
+            <!-- Branding Area -->
+            <div class="col-lg-4 col-md-12 text-center text-lg-start mb-3 mb-lg-0">
+                <h4 class="footer-logo mb-1">Dwip<span>Nandi</span></h4>
+                <p class="footer-tagline mb-1">Learn and Teach Every Time 💚</p>
+                <p class="footer-copy mb-0">© <span id="currentYear"></span> | All Rights Reserved.</p>
+            </div>
+
+            <!-- Social Connect -->
+            <div class="col-lg-4 col-md-6 text-center mb-3 mb-lg-0">
+                <span class="social-label">CONNECT WITH ME</span>
+                <div class="footer-social-icons mt-2">
+                    <a href="#" class="social-circle"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-circle active"><i class="fab fa-github"></i></a>
+                    <a href="#" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="social-circle"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Back to Top Button -->
+            <div class="col-lg-4 col-md-6 text-center text-lg-end">
+                <a href="#home" class="btn-back-top">
+                    Back to Top <i class="fas fa-arrow-up ms-1"></i>
+                </a>
+            </div>
+
+        </div>
+    </footer>
+</div>
+
+<script>
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+</script>
+</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

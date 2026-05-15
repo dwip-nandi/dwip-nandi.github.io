@@ -1,0 +1,1381 @@
+:root {
+    --green-dark: #157347;
+    --green-main: #198754;
+    --green-light: #e9f5ee;
+    --sidebar-width: 260px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8fdfb;
+    overflow-x: hidden;
+    background: linear-gradient(180deg, #ffffff 0%, #e9f1ed 100%);
+    background-attachment: fixed; /* স্ক্রল করলেও ব্যাকগ্রাউন্ড স্থির থাকবে */
+}
+
+/* Sidebar Styling */
+#sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: linear-gradient(180deg, #ffffff 0%, #d1e7dd 100%);
+    box-shadow: 4px 0 20px rgba(25, 135, 84, 0.1);
+    transition: all 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    z-index: 1000;
+    border-right: 1px solid rgba(25, 135, 84, 0.2);
+    
+    /* ফ্লেক্সবক্স ব্যবহার করে হেডার আর মেনু আলাদা করা হয়েছে */
+    display: flex;
+    flex-direction: column;
+}
+
+/* সাইডবার হেডার - এটি সবসময় উপরে স্থির থাকবে */
+#sidebar .sidebar-header {
+    padding: 50px 25px 20px 25px;
+    text-align: center;
+    border-bottom: 1px solid rgba(25, 135, 84, 0.1);
+    flex-shrink: 0; /* এটি যেন স্ক্রল না হয় */
+    background: transparent;
+}
+
+#sidebar .sidebar-header h3 {
+    color: #198754;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+/* মেনু লিস্ট - শুধু এই অংশটুকু স্ক্রল করবে */
+#sidebar ul {
+    flex-grow: 1; 
+    overflow-y: auto; /* এখানে স্ক্রলিং চালু করা হয়েছে */
+    overflow-x: hidden;
+    padding: 10px 0 30px 0;
+    list-style: none;
+    margin: 0;
+}
+
+/* --- প্রিমিয়াম স্ক্রলবার ডিজাইন --- */
+#sidebar ul::-webkit-scrollbar {
+    width: 5px;
+}
+#sidebar ul::-webkit-scrollbar-thumb {
+    background: #198754;
+    border-radius: 10px;
+}
+
+/* মেনু আইটেম ও তোর আগের সব স্টাইল */
+#sidebar ul li a {
+    padding: 15px 25px;
+    display: flex;
+    align-items: center;
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    margin: 5px 15px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+/* আইকন স্টাইল */
+#sidebar ul li a i {
+    margin-right: 15px;
+    color: #198754;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+/* --- সেই ডাইনামিক হোভার ইফেক্ট --- */
+#sidebar ul li a:hover {
+    background-color: #ffffff;
+    color: #157347;
+    transform: translateX(10px); /* ডানে সরে আসার সেই সুন্দর ইফেক্ট */
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.1);
+}
+
+#sidebar ul li a:hover i {
+    transform: scale(1.2) rotate(-5deg);
+}
+
+/* একটিভ মেনু স্টাইল */
+#sidebar ul li.active a {
+    background-color: #198754;
+    color: #ffffff !important;
+    box-shadow: 0 8px 20px rgba(25, 135, 84, 0.2);
+}
+
+#sidebar ul li.active a i {
+    color: #ffffff;
+}
+
+/* যখন মেনু হাইড হবে */
+#sidebar.active {
+    margin-left: -260px;
+}
+
+/* Content Area */
+#content {
+    width: calc(100% - var(--sidebar-width));
+    margin-left: var(--sidebar-width);
+    transition: all 0.3s;
+    min-height: 100vh;
+}
+
+#content.active {
+    width: 100%;
+    margin-left: 0;
+}
+
+/* Top Navbar with Bars Icon */
+.top-navbar {
+    padding: 15px 30px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+}
+
+.toggle-icon {
+    cursor: pointer;
+    font-size: 22px;
+    color: var(--green-main);
+    transition: 0.3s;
+}
+
+.toggle-icon:hover {
+    transform: scale(1.1);
+}
+
+.brand-name {
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+/* টপ বার লোগো স্টাইল */
+.logo-section {
+    display: flex;
+    align-items: center;
+}
+
+.top-logo {
+    height: 40px; /* তোর লোগোর উচ্চতা অনুযায়ী এটা পরিবর্তন করতে পারিস */
+    width: auto;
+    object-fit: contain;
+    transition: 0.3s;
+}
+
+.top-logo:hover {
+    transform: scale(1.1); /* লোগোর ওপর মাউস নিলে একটু বড় হবে */
+}
+
+/* মোবাইল ভিউতে লোগো ছোট করার জন্য */
+@media (max-width: 576px) {
+    .top-logo {
+        height: 30px;
+    }
+}
+
+/* top bar backround */
+.top-navbar {
+    padding: 12px 30px;
+    /* ব্যাকগ্রাউন্ড গ্রিন কালারটা আরেকটু ডিপ করা হয়েছে */
+    background: linear-gradient(90deg, #ffffff 0%, #d1e7dd 100%);
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    /* নিচে একটি শক্তিশালী গ্রিন বর্ডার */
+    border-bottom: 3px solid #198754;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* টগল আইকনের জন্য নতুন হোভার ইফেক্ট */
+.toggle-icon {
+    cursor: pointer;
+    font-size: 24px;
+    color: #198754;
+    padding: 8px;
+    border-radius: 50%;
+    transition: all 0.4s ease; /* স্মুথ ট্রানজিশন */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toggle-icon:hover {
+    background-color: #198754; /* হোভার করলে ব্যাকগ্রাউন্ড গ্রিন হবে */
+    color: #ffffff; /* আইকন সাদা হয়ে যাবে */
+    transform: rotate(90deg); /* আইকনটি ৯০ ডিগ্রি ঘুরবে, যা দেখতে ডাইনামিক লাগে */
+}
+
+/* ব্র্যান্ড নেম বা নামের জন্য হোভার */
+.brand-name {
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 1px;
+    cursor: default;
+    transition: 0.3s;
+}
+
+.brand-name:hover {
+    color: #198754; /* নামের ওপর মাউস নিলে গ্রিন হবে */
+    text-shadow: 1px 1px 2px rgba(25, 135, 84, 0.2);
+}
+
+/* লোগোর জন্য হোভার ইফেক্ট */
+.top-logo {
+    height: 45px;
+    width: auto;
+    transition: all 0.3s ease;
+}
+
+.top-logo:hover {
+    transform: scale(1.15) rotate(-5deg); /* লোগো একটু বড় হবে এবং হালকা বাঁকবে */
+    filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+}
+/* for why my profile start at under the top ber */
+section {
+    scroll-margin-top: 80px; 
+}
+
+/* কন্টেন্ট এরিয়ার মেইন সেটিংস */
+#content {
+    min-height: 100vh;
+}
+/* Section Designs */
+.section-title {
+    color: var(--green-main);
+    font-weight: 700;
+    border-left: 5px solid var(--green-main);
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.slider-container {
+    border-radius: 15px;
+    overflow: hidden;
+    border: 4px solid #fff;
+}
+
+.carousel-item img {
+    height: 400px;
+    object-fit: cover;
+}
+
+/* স্লাইডারের মেইন ইমেজ স্টাইল */
+.slider-img {
+    width: 100%;
+    object-fit: cover; /* এটি ছবিকে স্ট্রেচ হতে দেবে না, বরং সুন্দরভাবে ফিট করবে */
+    object-position: center; /* ছবির মাঝখানের অংশকে ফোকাসে রাখবে */
+}
+
+/* ডেক্সটপের জন্য সাইজ (১৬:৯ রেশিও সাধারণত স্ট্যান্ডার্ড) */
+@media (min-width: 992px) {
+    .slider-img {
+        height: 500px; /* তোর পছন্দমতো হাইট দিতে পারিস */
+    }
+}
+
+/* ট্যাবলেটের জন্য সাইজ */
+@media (min-width: 576px) and (max-width: 991px) {
+    .slider-img {
+        height: 400px;
+    }
+}
+
+/* ফোনের জন্য সাইজ (যেহেতু ফোন ভিউ লম্বা হয়) */
+@media (max-width: 575px) {
+    .slider-img {
+        height: 550px; /* ফোনের লম্বা ইমেজের জন্য হাইট বাড়িয়ে দেওয়া হয়েছে */
+    }
+}
+
+.project-card {
+    transition: 0.3s;
+    border-radius: 15px;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(25, 135, 84, 0.1) !important;
+}
+
+.gallery-item {
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+    filter: brightness(80%);
+}
+
+.social-icons a {
+    color: #666;
+    font-size: 20px;
+    margin: 0 10px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: var(--green-main);
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #sidebar { margin-left: calc(-1 * var(--sidebar-width)); }
+    #content { margin-left: 0; width: 100%; }
+    #sidebar.active { margin-left: 0; }
+}
+
+/* কন্টেন্ট এরিয়ার কার্ডগুলো যেন সাদা থাকে, তাহলে ওগুলো ভেসে উঠবে */
+.section-card {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(25, 135, 84, 0.05);
+    margin-bottom: 30px;
+}
+
+.content-section {
+    background: #ffffff;
+    border-radius: 15px;
+    padding: 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05); /* হালকা শ্যাডো */
+    border: 1px solid rgba(25, 135, 84, 0.1); /* হালকা সবুজ বর্ডার */
+}
+
+/* my-profile section */
+.stat-box {
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    border-bottom: 3px solid #198754; /* নিচে একটি সবুজ বর্ডার */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-8px); /* হোভার করলে সামান্য উপরে উঠবে */
+    box-shadow: 0 10px 20px rgba(25, 135, 84, 0.15) !important;
+}
+
+.stat-box i {
+    font-size: 2rem;
+}
+
+.stat-box h2 {
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.stat-box p {
+    font-size: 0.9rem;
+    color: #6c757d;
+    font-weight: 500;
+    margin: 0;
+}
+
+/* সোশ্যাল আইকন স্টাইল */
+.social-icons a {
+    font-size: 1.5rem;
+    /* color: #198754; */
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #157347;
+}
+.profile-card{
+    border-bottom: 3px solid #157347;
+}
+
+/* ------------------------------------About me section---------------- */
+/* সেকশন টাইটেল */
+.section-title {
+    color: #198754;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+/* কাস্টম কন্টেইনার: এটিই মূল কাজ করবে */
+.custom-profile-container {
+    max-width: 100%;
+    width: 100%; 
+    margin: 0 auto; /* মাঝখানে রাখার জন্য */
+    background: #ffffff;
+    border-radius: 15px;
+    border: 1px solid #e0e0e0;
+    overflow: hidden;
+    border-bottom: 3px solid #198754;
+}
+
+/* ইমেজ এডজাস্টমেন্ট */
+.about-image-wrapper {
+    padding: 20px;
+}
+
+.about-img {
+    border-radius: 50%;
+    border: 3px solid #198754;
+    max-height: 280px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+/* টেক্সট এডজাস্টমেন্ট */
+.about-content {
+    padding: 40px 50px 40px 20px;
+}
+
+.main-name {
+    font-size: 2.2rem;
+    color: #222;
+}
+
+.sub-title {
+    color: #198754;
+    font-weight: 600;
+}
+
+.about-description {
+    font-size: 1.05rem;
+    line-height: 1.6;
+}
+
+/* বাটন ডিজাইন */
+.info-btn {
+    padding: 8px 22px;
+    border: 2px solid #198754;
+    border-radius: 6px;
+    color: #198754;
+    background: transparent;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.info-btn:hover, .info-btn.active {
+    background-color: #198754;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(25, 135, 84, 0.2);
+}
+
+/* মোবাইল ভিউর জন্য সাইজ ঠিক করা */
+@media (max-width: 100%) {
+    .custom-profile-container {
+        width: 95%; /* ছোট স্ক্রিনে সাইজ এডজাস্ট */
+    }
+}
+
+@media (max-width: 768px) {
+    .about-content {
+        padding: 20px 30px 40px 30px;
+        text-align: center;
+    }
+    .about-buttons {
+        justify-content: center;
+    }
+}
+
+/*  --------------------------  my projects----------------------- */
+/* প্রজেক্ট কার্ড ডিজাইন */
+.project-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-bottom: 3px solid #198754 !important; /* তোর সিগনেচার সবুজ বর্ডার */
+    background: #fff;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* ইমেজ কন্টেইনার */
+.project-img-container {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.project-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-img-container img {
+    transform: scale(1.1);
+}
+
+/* টেক স্ট্যাক (Tech Stacks) স্টাইল */
+.stack-item {
+    background: #f1f8f5;
+    color: #198754;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+/* লাইভ বাটন (তোর আগের সেকশনের বাটন স্টাইল ফলো করা হয়েছে) */
+.live-btn {
+    text-decoration: none;
+    padding: 8px 25px;
+    border: 2px solid #198754;
+    border-radius: 6px;
+    color: #198754;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    background: transparent;
+}
+
+.live-btn:hover {
+    background-color: #198754;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(25, 135, 84, 0.3);
+}
+/*  --------------------------my skills section-------------- */
+#skills {
+    background-color: #f0f4f2; /* হালকা গ্রিন-হোয়াইট ব্যাকগ্রাউন্ড */
+    padding: 80px 0;
+}
+
+/* স্কিল কার্ড ডিজাইন (সাদা থিম ও গভীর শ্যাডো) */
+.skill-card {
+    background-color: #ffffff; /* পিওর হোয়াইট ব্যাকগ্রাউন্ড */
+    border-radius: 15px;
+    padding: 40px 20px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid #e1e8e4;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    /* গভীর শ্যাডো ইফেক্ট */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.08); 
+}
+
+/* কার্ড স্ট্যাক ইফেক্ট (গভীর শ্যাডো লেয়ার) */
+.skill-card::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: -12px;
+    width: 100%;
+    height: 100%;
+    background-color: #bee2d2; /* হালকা সবুজ ব্যাক লেয়ার */
+    border-radius: 15px;
+    z-index: -1;
+    transition: all 0.3s ease;
+    box-shadow: 5px 5px 15px rgba(22, 101, 64, 0.714);
+}
+
+/* আইকন স্টাইল */
+.skill-icon {
+    font-size: 2.5rem;
+    color: #198754; /* শুরুতে আইকন সবুজ */
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.skill-name {
+    color: #2d3436; /* ডার্ক টেক্সট (ব্ল্যাক নয়) */
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/* হোভার এফেক্ট: গ্রিন ও হোয়াইট কম্বিনেশন */
+.skill-card:hover {
+    transform: translate(-8px, -8px); /* একটু বেশি উপরে সরবে */
+    background-color: #062f1c; /* কার্ড সবুজ হয়ে যাবে */
+    border-color: #21905c;
+}
+
+.skill-card:hover .skill-icon {
+    transform: rotate(10deg) scale(1.1);
+    color: #ffffff; /* হোভারে আইকন সাদা */
+}
+
+.skill-card:hover .skill-name {
+    color: #ffffff; /* হোভারে নাম সাদা */
+}
+
+.skill-card:hover::after {
+    top: 6px;
+    right: -6px;
+    background-color: #146c43; /* ব্যাক লেয়ার গাঢ় সবুজ হবে */
+    box-shadow: 15px 15px 30px rgba(25, 135, 84, 0.3); /* শ্যাডো আরও গভীর হবে */
+}
+
+/* মোবাইল ভিউ এডজাস্টমেন্ট */
+@media (max-width: 576px) {
+    .skill-card {
+        padding: 30px 15px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.05);
+    }
+    .skill-card::after {
+        display: none; /* মোবাইলে ক্লিন লুকের জন্য স্ট্যাক অফ */
+    }
+}
+
+/* -----------------------------resume section-------------------------- */
+/* রেজুমে সেকশন ব্যাকগ্রাউন্ড */
+#resume {
+    background-color: #ffffff; /* ক্লিন হোয়াইট */
+    padding: 80px 0;
+}
+
+/* রেজুমে কার্ড ডিজাইন */
+.resume-card {
+    background-color: #f8fbf9; /* খুব হালকা গ্রিনিশ-হোয়াইট */
+    border-radius: 15px;
+    padding: 30px;
+    border-left: 6px solid #198754; /* সিগনেচার গ্রিন বর্ডার */
+    position: relative;
+    z-index: 1;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 8px 8px 25px rgba(0, 0, 0, 0.04); /* সফট শ্যাডো */
+    overflow: hidden;
+}
+
+/* Card-Stack Effect (পেছনের লেয়ার) */
+.resume-card::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: -12px;
+    width: 100%;
+    height: 100%;
+    background-color: #e9f5ee; /* হালকা সবুজ ব্যাক লেয়ার */
+    border-radius: 15px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+/* ডেট ব্যাজ */
+.resume-date {
+    background-color: #198754;
+    color: #ffffff;
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+    transition: all 0.3s ease;
+}
+
+/* টাইটেল এবং টেক্সট */
+.resume-degree {
+    color: #1a1a1a; /* গাঢ় গ্রে/ব্ল্যাক টেক্সট */
+    font-weight: 700;
+    margin-bottom: 5px;
+    transition: all 0.3s ease;
+}
+
+.resume-institute {
+    color: #198754; /* শুরুতে সবুজ */
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 12px;
+    transition: all 0.3s ease;
+}
+
+.resume-text {
+    color: #555555; /* পড়ার সুবিধার জন্য গ্রে টেক্সট */
+    font-size: 0.95rem;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+
+/* --- হোভার ইফেক্ট (সবচেয়ে গুরুত্বপূর্ণ অংশ) --- */
+
+.resume-card:hover {
+    transform: translate(-5px, -5px);
+    background-color: #198754; /* কার্ডের ব্যাকগ্রাউন্ড সবুজ হয়ে যাবে */
+    box-shadow: 15px 15px 35px rgba(25, 135, 84, 0.25); /* সবুজ শ্যাডো */
+}
+
+/* হোভারে টেক্সট ক্লিয়ার করার জন্য সাদা কালার */
+.resume-card:hover .resume-degree,
+.resume-card:hover .resume-institute,
+.resume-card:hover .resume-text {
+    color: #ffffff !important; /* হোভারে সব টেক্সট পিওর হোয়াইট */
+}
+
+.resume-card:hover .resume-date {
+    background-color: #ffffff; /* হোভারে ডেট ব্যাজ সাদা হবে */
+    color: #198754; /* ডেট ব্যাজের লেখা সবুজ হবে */
+}
+
+.resume-card:hover::after {
+    top: 6px;
+    right: -6px;
+    background-color: #146c43; /* পেছনের লেয়ার গাঢ় সবুজ */
+}
+
+/* ডাউনলোড বাটন */
+.btn-resume-download {
+    background-color: #198754;
+    color: #ffffff;
+    padding: 14px 40px;
+    border-radius: 50px;
+    font-weight: 600;
+    border: 2px solid #198754;
+    transition: all 0.3s ease;
+}
+
+.btn-resume-download:hover {
+    background-color: #ffffff;
+    color: #198754;
+    box-shadow: 0 10px 20px rgba(25, 135, 84, 0.2);
+    border: 2px solid #198754;
+}
+
+/* -------------------------------------contact me ---------------- */
+/* কন্টাক্ট কার্ড মেইন স্টাইল */
+.contact-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 40px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #e1e8e4;
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.05); /* গভীর শ্যাডো */
+}
+
+/* Card-Stack Effect (পেছনের লেয়ার) */
+.contact-card::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    width: 100%;
+    height: 100%;
+    background-color: #d1e7dd; /* তোর সিগনেচার হালকা সবুজ */
+    border-radius: 20px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+/* ইনপুট ফিল্ড স্টাইল */
+.form-label {
+    color: #198754;
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.form-control {
+    background-color: #f8fbf9;
+    border: 2px solid #e9f5ee;
+    border-radius: 10px;
+    padding: 12px 15px;
+    color: #2d3436;
+    transition: all 0.3s ease;
+}
+
+/* ইনপুট ফোকাস ইফেক্ট */
+.form-control:focus {
+    background-color: #ffffff;
+    border-color: #198754;
+    box-shadow: 0 0 10px rgba(25, 135, 84, 0.1);
+    outline: none;
+}
+
+/* সেন্ড বাটন স্টাইল */
+.btn-contact-send {
+    background-color: #198754;
+    color: #ffffff;
+    padding: 15px 40px;
+    border-radius: 50px;
+    font-weight: 700;
+    border: 2px solid #198754;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s ease;
+    margin-top: 20px;
+}
+
+.btn-contact-send:hover {
+    background-color: #ffffff;
+    color: #198754;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(25, 135, 84, 0.2);
+    border: 2px solid #062f1c;
+}
+
+/* হোভার করলে পুরো কার্ডের স্ট্যাক ইফেক্ট পরিবর্তন */
+.contact-card:hover::after {
+    background-color: #146c43; /* হোভারে ব্যাক লেয়ার গাঢ় সবুজ */
+    top: 8px;
+    right: -8px;
+    color: #f0f4f2;
+}
+
+/* মোবাইল রেসপন্সিভনেস */
+@media (max-width: 768px) {
+    .contact-card {
+        padding: 25px;
+    }
+    .contact-card::after {
+        display: none; /* মোবাইলে ক্লিন লুকের জন্য */
+    }
+}
+
+/* -----------------------social section--------------- */
+/* সোশ্যাল কার্ড মেইন স্টাইল */
+.social-card-link {
+    text-decoration: none !important;
+}
+
+.social-card {
+    background-color: #f8fbf9;
+    border-radius: 15px;
+    padding: 30px 15px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #e1e8e4;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: visible; /* স্ট্যাক লেয়ার দেখানোর জন্য */
+}
+
+/* Card-Stack Effect (পেছনের লেয়ার) */
+.social-card::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    right: -10px;
+    width: 100%;
+    height: 100%;
+    background-color: #d1e7dd; /* হালকা সবুজ */
+    border-radius: 15px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+/* আইকন এবং টেক্সট স্টাইল */
+.social-icon {
+    font-size: 2rem;
+    color: #198754;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+}
+
+.social-name {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #2d3436;
+    transition: all 0.3s ease;
+}
+
+/* --- PC Hover & Mobile Active States --- */
+
+/* হোভার (PC) এবং টাচ/ক্লিক (Mobile) করলে যা হবে */
+.social-card:hover, 
+.social-card:active {
+    background-color: #198754;
+    border-color: #198754;
+    transform: translate(-5px, -5px);
+}
+
+.social-card:hover .social-icon, 
+.social-card:active .social-icon,
+.social-card:hover .social-name, 
+.social-card:active .social-name {
+    color: #ffffff !important;
+}
+
+/* পেছনের লেয়ারের পরিবর্তন (PC & Mobile) */
+.social-card:hover::after, 
+.social-card:active::after {
+    top: 5px;
+    right: -5px;
+    background-color: #146c43;
+    box-shadow: 10px 10px 20px rgba(25, 135, 84, 0.2);
+}
+
+/* মোবাইল ভিউ এডজাস্টমেন্ট */
+@media (max-width: 768px) {
+    .social-card {
+        padding: 20px 10px;
+        margin-right: 10px; /* স্ট্যাক লেয়ারের জন্য স্পেস */
+    }
+    
+    .social-card::after {
+        top: 8px;
+        right: -8px;
+    }
+
+    .social-icon {
+        font-size: 1.6rem;
+    }
+}
+/* -------------------------- Achievement Section -------------------- */
+.achievement-card {
+    background-color: #f8fbf9;
+    border-radius: 20px;
+    padding: 40px 25px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #e1e8e4;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: visible; /* স্ট্যাক লেয়ার দেখানোর জন্য */
+}
+
+.achievement-card::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    width: 100%;
+    height: 100%;
+    background-color: #d1e7dd;
+    border-radius: 20px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.achievement-icon-box {
+    width: 70px;
+    height: 70px;
+    background-color: #f0f4f2;
+    color: #198754;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+
+.achievement-title { color: #2d3436; font-weight: 700; margin-bottom: 12px; transition: all 0.3s ease; }
+.achievement-desc { color: #636e72; font-size: 0.95rem; line-height: 1.5; margin-bottom: 15px; transition: all 0.3s ease; }
+
+.achievement-date {
+    font-size: 0.85rem; font-weight: 600; color: #198754;
+    background-color: #e9f5ee; padding: 5px 15px; border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+/* Hover & Active states */
+.achievement-card:hover, .achievement-card:active {
+    background-color: #198754;
+    border-color: #198754;
+    transform: translate(-8px, -8px);
+}
+
+.achievement-card:hover .achievement-title, .achievement-card:active .achievement-title,
+.achievement-card:hover .achievement-desc, .achievement-card:active .achievement-desc {
+    color: #ffffff !important;
+}
+
+.achievement-card:hover .achievement-icon-box, .achievement-card:active .achievement-icon-box {
+    background-color: #ffffff; color: #198754;
+}
+
+.achievement-card:hover .achievement-date, .achievement-card:active .achievement-date {
+    background-color: #ffffff; color: #198754;
+}
+
+.achievement-card:hover::after, .achievement-card:active::after {
+    top: 8px; right: -8px;
+    background-color: #146c43;
+    box-shadow: 10px 10px 20px rgba(25, 135, 84, 0.2);
+}
+
+/* -------------------------- Idea Section -------------------- */
+.idea-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 50px 30px 30px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #e1e8e4;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    overflow: visible;
+}
+
+.idea-card::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    width: 100%;
+    height: 100%;
+    background-color: #d1e7dd;
+    border-radius: 20px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.idea-badge {
+    position: absolute; top: 20px; left: 30px;
+    background-color: #198754; color: #ffffff;
+    padding: 4px 12px; border-radius: 5px;
+    font-size: 0.75rem; font-weight: 600; text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.idea-title { color: #198754; font-weight: 700; margin-bottom: 15px; margin-top: 10px; transition: all 0.3s ease; }
+.idea-desc { color: #555555; font-size: 0.95rem; line-height: 1.6; flex-grow: 1; transition: all 0.3s ease; }
+.idea-footer { margin-top: 20px; font-size: 1.5rem; color: #d1e7dd; text-align: right; transition: all 0.3s ease; }
+
+/* Hover & Active states */
+.idea-card:hover, .idea-card:active {
+    background-color: #198754;
+    border-color: #198754;
+    transform: translate(-8px, -8px);
+}
+
+.idea-card:hover .idea-title, .idea-card:active .idea-title,
+.idea-card:hover .idea-desc, .idea-card:active .idea-desc {
+    color: #ffffff !important;
+}
+
+.idea-card:hover .idea-badge, .idea-card:active .idea-badge {
+    background-color: #ffffff; color: #198754;
+}
+
+.idea-card:hover .idea-footer, .idea-card:active .idea-footer {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.idea-card:hover::after, .idea-card:active::after {
+    top: 8px; right: -8px;
+    background-color: #146c43;
+    box-shadow: 10px 10px 20px rgba(25, 135, 84, 0.2);
+}
+
+/* -------------------------- Responsive Adjustment -------------------- */
+@media (max-width: 768px) {
+    .achievement-card, .idea-card {
+        margin-right: 15px; /* স্ট্যাক লেয়ারের জন্য স্পেস */
+        margin-bottom: 15px;
+    }
+    
+    .achievement-card::after, .idea-card::after {
+        top: 10px;
+        right: -10px;
+    }
+}
+
+/* ------------------------------photo gallary----------- */
+/* গ্যালারি কার্ড মেইন স্টাইল */
+.gallery-card {
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #e1e8e4;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: visible;
+}
+
+/* Card-Stack Effect (পেছনের লেয়ার) */
+.gallery-card::after {
+    content: '';
+    position: absolute;
+    top: 12px;
+    right: -12px;
+    width: 100%;
+    height: 100%;
+    background-color: #d1e7dd; /* হালকা সবুজ */
+    border-radius: 15px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+/* ইমেজ বক্স */
+.gallery-img-box {
+    border-radius: 10px;
+    overflow: hidden;
+    height: 200px; /* তুই তোর পছন্দমতো হাইট দিতে পারিস */
+}
+
+.gallery-img-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+/* টেক্সট ইনফো */
+.gallery-info {
+    padding: 15px 5px 5px;
+    text-align: left;
+    transition: all 0.3s ease;
+}
+
+.gallery-title {
+    color: #198754;
+    font-weight: 700;
+    margin-bottom: 3px;
+}
+
+.gallery-desc {
+    color: #636e72;
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+/* --- PC Hover & Mobile Active States --- */
+
+.gallery-card:hover, 
+.gallery-card:active {
+    background-color: #198754;
+    border-color: #198754;
+    transform: translate(-6px, -6px);
+}
+
+.gallery-card:hover .gallery-img-box img,
+.gallery-card:active .gallery-img-box img {
+    transform: scale(1.1); /* ছবি একটু জুম হবে */
+}
+
+.gallery-card:hover .gallery-title, 
+.gallery-card:active .gallery-title,
+.gallery-card:hover .gallery-desc, 
+.gallery-card:active .gallery-desc {
+    color: #ffffff !important;
+}
+
+.gallery-card:hover::after, 
+.gallery-card:active::after {
+    top: 6px;
+    right: -6px;
+    background-color: #146c43;
+    box-shadow: 10px 10px 20px rgba(25, 135, 84, 0.2);
+}
+
+/* মোবাইল রেসপন্সিভনেস */
+@media (max-width: 768px) {
+    .gallery-card {
+        margin-right: 12px;
+        margin-bottom: 20px;
+    }
+    
+    .gallery-card::after {
+        top: 8px;
+        right: -8px;
+    }
+}
+
+/* ----------------------setting section----------------- */
+/* সেটিং কার্ড মেইন স্টাইল */
+.settings-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #e1e8e4;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    overflow: visible;
+}
+
+/* Card-Stack Effect (পেছনের লেয়ার) */
+.settings-card::after {
+    content: '';
+    position: absolute;
+    top: 15px;
+    right: -15px;
+    width: 100%;
+    height: 100%;
+    background-color: #d1e7dd;
+    border-radius: 20px;
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+/* সেটিং আইটেম স্টাইল */
+.setting-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    transition: all 0.3s ease;
+}
+
+.setting-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: #2d3436;
+    font-weight: 600;
+}
+
+.setting-info i {
+    color: #198754;
+    font-size: 1.2rem;
+}
+
+/* কাস্টম টগল এবং সিলেক্ট বক্স */
+.custom-switch {
+    width: 3rem !important;
+    height: 1.5rem !important;
+    cursor: pointer;
+}
+
+.custom-switch:checked {
+    background-color: #198754 !important;
+    border-color: #198754 !important;
+}
+
+.setting-select {
+    width: auto;
+    border: 1px solid #d1e7dd;
+    border-radius: 8px;
+    color: #198754;
+    font-weight: 600;
+}
+
+.setting-divider {
+    margin: 5px 0;
+    opacity: 0.1;
+}
+
+/* --- PC Hover & Mobile Active States --- */
+
+.settings-card:hover, 
+.settings-card:active {
+    transform: translate(-5px, -5px);
+}
+
+/* হোভার করলে পেছনের লেয়ার আরও গাঢ় হবে */
+.settings-card:hover::after, 
+.settings-card:active::after {
+    background-color: #146c43;
+    top: 8px;
+    right: -8px;
+}
+
+/* মোবাইল রেসপন্সিভনেস */
+@media (max-width: 768px) {
+    .settings-card {
+        margin-right: 15px;
+        padding: 20px;
+    }
+    
+    .setting-info span {
+        font-size: 0.9rem;
+    }
+}
+
+/* ----------------------footer section------------------ */
+.container_footer{
+    padding:0 0 4px 0 !important;
+}
+.footer-card {
+    background-color: #ffffff;
+    /*border-radius: 25px; /* ইমেজের মতো বেশি গোল কর্নার */
+    padding: 25px 40px;
+    border: 1px solid #e1e8e4;
+    position: relative;
+    box-shadow: 0 10px 0px #198754 !important; 
+    transition: all 0.3s ease;
+    margin: 0 !important;
+}
+
+/* ব্র্যান্ডিং স্টাইল */
+.footer-logo { font-weight: 800; font-size: 1.5rem; color: #000; }
+.footer-logo span { color: #198754; }
+.footer-tagline { color: #198754; font-weight: 600; font-size: 0.9rem; }
+.footer-copy { color: #888; font-size: 0.85rem; font-weight: 500; }
+
+/* সোশ্যাল আইকন স্টাইল */
+.social-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #555;
+    letter-spacing: 1px;
+}
+
+.footer-social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+.social-circle {
+    width: 45px;
+    height: 45px;
+    border: 2px solid #198754;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #198754;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+/* ইমেজের মতো একটি আইকন অ্যাক্টিভ (সবুজ) থাকবে */
+.social-circle.active, .social-circle:hover {
+    background-color: #198754;
+    color: #fff;
+}
+
+/* Back to Top বাটন */
+.btn-back-top {
+    display: inline-block;
+    padding: 10px 20px;
+    border: 2px solid #198754;
+    border-radius: 12px;
+    color: #198754;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+    /* কার্ড স্ট্যাক শ্যাডো */
+    box-shadow: 4px 4px 0px #d1e7dd;
+}
+
+.btn-back-top:hover {
+    background-color: #198754;
+    color: #fff;
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px #146c43;
+}
+
+/* মোবাইল রেসপন্সিভনেস */
+@media (max-width: 991px) {
+    .footer-card {
+        padding: 25px 20px;
+        margin: 0 10px;
+    }
+}
