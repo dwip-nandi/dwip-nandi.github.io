@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // ৩. স্ক্রল করার সময় অটোমেটিক মেনু একটিভ হওয়া
+    //automatic menu
     window.addEventListener('scroll', function() {
         let current = "";
         const sections = document.querySelectorAll('section');
@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const updateCount = () => {
             const target = +counter.getAttribute('data-target');
             const count = +counter.innerText;
-            const speed = 200; // যত কমাবে তত দ্রুত হবে
+            const speed = 200;
             
             const inc = target / speed;
 
@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 counter.innerText = Math.ceil(count + inc);
                 setTimeout(updateCount, 1);
             } else {
-                counter.innerText = target + "+"; // শেষে প্লাস সাইন যোগ করার জন্য
+                counter.innerText = target + "+"; 
             }
         };
         updateCount();
@@ -82,10 +82,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // -------------------------- about me section-------------
 const infoData = {
-    personal: "Hello! I am Dwip Nandi, a compassionate engineering student. I love inspirational stories and am always looking for new challenges.",
-    programming: "C++, PHP, and Laravel are my main focus. I have solved 300+ problems and am passionate about data structures and algorithms.",
-    research: "I am actively researching in the fields of IoT, AI, and Agri-Tech to develop innovative solutions for the agricultural sector in Bangladesh.",
-    dev: "I enjoy building full-stack web applications. Projects like 'AI Interviewer' and 'Study Lab' showcase my development and problem-solving skills."
+    personal: "Hello, I am a 4th-year undergraduate student in the Department of Information and Communication Engineering (ICE) at the University of Rajshahi. As a final-year student, I am deeply involved in exploring the intersection of communication technology and software engineering. I am driven by a passion for solving complex problems and am constantly looking for opportunities to apply my academic knowledge to real-world technical challenges.",
+    programming: "I have a strong foundation in competitive programming, primarily using C and C++. To date, I have successfully solved over 800 problems across various online judges and participated in numerous online and offline programming contests. I have mastered essential data structures and algorithms, which has honed my analytical thinking and efficiency in writing clean, optimized, and scalable code.",
+    research: "My research interests focus on cutting-edge technologies like Human-Computer Interaction (HCI), Microstrip Patch Antennas, and Virtual Reality (VR). I am currently working on an AI-based Bengali Sign Language Detection system using computer vision. My goal is to contribute to the scientific community by developing innovative solutions that integrate advanced hardware and intelligent software systems.",
+    dev: "I am an experienced Web Developer specializing in PHP and Laravel for building robust, scalable applications. My expertise includes developing ERP systems, Dynamic Store Management platforms, and integrating AI-driven features with RESTful APIs. Additionally, I am proficient in WordPress, capable of designing custom pages and developing personalized themes and plugins to meet specific client requirements."
 };
 
 function showInfo(type, element) {
