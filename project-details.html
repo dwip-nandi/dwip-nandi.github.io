@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dwip Nandi | Project Details</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        /* ডিটেইলস পেজের ইমেজের জন্য কাস্টম স্টাইল */
+        .screenshot-card {
+            background: #fff;
+            padding: 10px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .screenshot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(25, 135, 84, 0.15);
+        }
+        .screenshot-img {
+            width: 100%;
+            height: 190px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        
+        /* কাস্টম স্ক্রিনশট ডেসক্রিপশন/ক্যাপশন */
+        .screenshot-caption {
+            color: #198754 !important;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-top: 12px;
+            margin-bottom: 2px;
+        }
+        
+        /* ব্যাক বাটনের কাস্টম হোভার স্টাইল */
+        .btn-custom-back {
+            border-color: #198754 !important;
+            color: #198754 !important;
+            transition: all 0.3s ease-in-out;
+            font-weight: 600;
+            border-radius: 6px;
+        }
+        .btn-custom-back:hover {
+            background-color: #198754 !important;
+            color: #fff !important;
+            transform: translateX(-3px);
+        }
+
+        /* My Projects প্রধান টাইটেল স্টাইল */
+        .page-main-title {
+            color: #198754;
+            font-weight: 700;
+            border-left: 5px solid #198754;
+            padding-left: 15px;
+            margin-bottom: 30px;
+            font-size: 2.2rem;
+            line-height: 1.1;
+        }
+
+        /* প্রতিটি সেকশনের সাব-হেডিং স্টাইল */
+        .section-title {
+            color: #212529;
+            font-weight: 600;
+            font-size: 1.4rem;
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 25px;
+        }
+        .section-title::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #198754;
+            border-radius: 2px;
+        }
+
+        /* প্রজেক্ট ডেসক্রিপশন টেক্সট স্টাইল */
+        #project-desc {
+            color: #343a40 !important; /* প্রফেশনাল ডার্ক চারকোল কালার */
+            font-size: 1.05rem;
+            line-height: 1.8;
+            text-align: justify;
+        }
+
+        /* প্রিমিয়াম টেকনোলজি ব্যাজ */
+        .tech-badge {
+            background-color: rgba(25, 135, 84, 0.08) !important;
+            color: #198754 !important;
+            border: 1px solid rgba(25, 135, 84, 0.2);
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 50px;
+        }
+
+        /* ব্র্যান্ড নেমের নিচের Portfolio সাবটেক্সট */
+        .brand-container {
+            display: flex;
+            flex-direction: column;
+        }
+        .portfolio-subtext {
+            font-size: 0.85rem;
+            color: #6c757d;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-top: -2px;
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+        }
+        .video-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+        #content {
+            width: 100% !important;
+            padding-left: 0 !important;
+            margin-left: 0 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="content">
+        
+        <div class="top-navbar shadow-sm d-flex align-items-center">
+            <div class="ms-4 brand-container">
+                <div class="brand-name" style="margin-bottom: 0; line-height: 1.2;">DWIP NANDI</div>
+                <div class="portfolio-subtext">Portfolio</div>
+            </div>
+            <div class="ms-auto logo-section">
+                <img src="DwipNandi.png" alt="Logo" class="top-logo">
+            </div>
+        </div>
+
+        <div class="container bg-white my-5 p-4 p-md-5 rounded shadow-sm" id="details-container" style="max-width: 1000px;">
+            
+            <h2 class="page-main-title">My Projects</h2>
+
+            <a href="index.html#projects" class="btn btn-custom-back btn-sm mb-4">← Go to the Project List...</a>
+
+            <h1 id="project-title" class="fw-bold text-dark mb-3" style="font-size: 2.5rem;">Project Title</h1>
+            <div id="project-tech" class="mb-4 d-flex flex-wrap gap-2"></div>
+
+            <hr class="my-4" style="opacity: 0.15;">
+
+            <h3 class="section-title">Project Features & Screenshots</h3>
+            <div class="row g-4 mb-5" id="project-screenshots"></div>
+
+            <h3 class="section-title">Project Description</h3>
+            <p id="project-desc" class="mb-5">
+                project description is there...
+            </p>
+
+            <div id="video-section" class="d-none">
+                <h3 class="section-title">Project Video</h3>
+                <div class="video-container mb-4">
+                    <iframe id="project-video" src="" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="container_footer pb-2">
+            <footer id="footer" class="footer-card shadow-sm">
+                <div class="row align-items-center">
+                    <div class="col-lg-4 col-md-12 text-center text-lg-start mb-3 mb-lg-0">
+                        <h4 class="footer-logo mb-1">Dwip<span>Nandi</span></h4>
+                        <p class="footer-tagline mb-1">Learn and Teach Every Time 💚</p>
+                        <p class="footer-copy mb-0">© <span id="currentYear"></span> | All Rights Reserved.</p>
+                    </div>
+                    <div class="col-lg-4 col-md-6 text-center mb-3 mb-lg-0">
+                        <span class="social-label">CONNECT WITH ME</span>
+                        <div class="footer-social-icons mt-2">
+                            <a href="#" class="social-circle"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-circle active"><i class="fab fa-github"></i></a>
+                            <a href="#" class="social-circle"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-circle"><i class="fab fa-whatsapp"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 text-center text-lg-end">
+                        <a href="index.html#home" class="btn-back-top">
+                            Back to Top <i class="fas fa-arrow-up ms-1"></i>
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+        const projectsData = {
+            "store-management": {
+                title: "Store Management System",
+                tech: ["Raw PHP", "MySQL", "Bootstrap"],
+                desc: "এটি একটি পূর্ণাঙ্গ ইনভেন্টরি সলিউশন যা ছোট ও মাঝারি দোকানের স্টক এবং বেচাকেনার হিসাব নিখুঁতভাবে ম্যানেজ করতে সাহায্য করে। এতে রয়েছে রিয়েল-টাইম স্টক অ্যালার্ট, কাস্টমার ইনভয়েস জেনারেটর এবং দৈনিক/মাসিক প্রফিট রিপোর্টিং সিস্টেম।",
+                screenshots: [
+                    { src: "images/project1.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    { src: "images/project1_dashboard.png", caption: "স্টক এবং ইনভেন্টরি ট্র্যাকিং" }, 
+                    { src: "images/project1_reports.png", caption: "দৈনিক ও মাসিক সেলস রিপোর্ট" },
+                    { src: "images/project.jpg", caption: "ইউজার ম্যানেজমেন্ট ও পারমিশন" }
+                ],
+                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            },
+            "ai-study-lab": {
+                title: "AI Study Lab",
+                tech: ["Laravel", "Tailwind CSS", "Python API"],
+                desc: "ইঞ্জিনিয়ারিং স্টুডেন্টদের জন্য একটি আধুনিক ভয়েস-অ্যাসিস্টেড ল্যাব প্ল্যাটফর্ম যা জটিল টপিকগুলোকে সহজ করে তোলে। এই প্ল্যাটফর্মে এআই ভয়েস কমান্ডের মাধ্যমে বিভিন্ন ল্যাব এক্সপেরিমেন্টের গایدলাইন এবং সリューション সহজেই খুঁজে পাওয়া যায়।",
+                screenshots: [
+                    { src: "images/project2.png", caption: "হোম পেজ ও এআই ইন্টারফেস" },
+                    { src: "images/project2_lab.png", caption: "ভয়েস কমান্ড এক্সপেরিমেন্ট প্যানেল" }
+                ],
+                videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" 
+            }
+        };
+
+        const urlParams = new URLSearchParams(window.location.search);
+        const projectId = urlParams.get('id');
+
+        if (projectId && projectsData[projectId]) {
+            const project = projectsData[projectId];
+            document.getElementById('project-title').innerText = project.title;
+            document.getElementById('project-desc').innerText = project.desc;
+
+            const techContainer = document.getElementById('project-tech');
+            project.tech.forEach(t => {
+                techContainer.innerHTML += `<span class="badge tech-badge">${t}</span>`;
+            });
+
+            const screenshotContainer = document.getElementById('project-screenshots');
+            project.screenshots.forEach(item => {
+                screenshotContainer.innerHTML += `
+                    <div class="col-sm-6 col-md-6 col-lg-4">
+                        <div class="screenshot-card text-center">
+                            <img src="${item.src}" class="screenshot-img" alt="${project.title}" onerror="this.src='https://placehold.co/600x400?text=No+Image'">
+                            <p class="screenshot-caption">${item.caption}</p>
+                        </div>
+                    </div>
+                `;
+            });
+
+            if (project.videoUrl) {
+                document.getElementById('project-video').src = project.videoUrl;
+                document.getElementById('video-section').classList.remove('d-none');
+            }
+        } else {
+            document.getElementById('details-container').innerHTML = `
+                <div class="text-center py-5">
+                    <h2 class="text-danger">প্রজেক্টটি পাওয়া যায়নি!</h2>
+                    <a href="index.html" class="btn btn-success mt-3">হোম পেজে ফিরে যান</a>
+                </div>
+            `;
+        }
+    </script>
+</body>
+</html>

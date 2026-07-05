@@ -158,52 +158,145 @@
 
 <!-- ------------------ My projects Section ----------------- -->
 <section id="projects" class="p-4">
-        <h2 class="section-title p-3">My Projects</h2>
+    <h2 class="section-title p-3">My Projects</h2>
 
-        <div class="row g-4">
-            <div class="col-md-6">
-                <div class="card h-100 project-card shadow-sm border-0">
-                    <div class="project-img-container">
-                        <img src="images/project1.png" class="card-img-top" alt="Store Management System">
-                        <div class="project-overlay">
-                             <span class="badge bg-success">PHP & MySQL</span>
-                        </div>
-                    </div>
-                    <div class="card-body p-4">
-                        <h4 class="card-title fw-bold text-dark">Store Management System</h4>
-                        <div class="tech-stacks mb-3">
-                            <span class="stack-item">Raw PHP</span>
-                            <span class="stack-item">MySQL</span>
-                            <span class="stack-item">Bootstrap</span>
-                        </div>
-                        <p class="card-text text-muted">একটি পূর্ণাঙ্গ ইনভেন্টরি সলিউশন যা ছোট দোকানের স্টক এবং হিসাব ম্যানেজ করতে সাহায্য করে।</p>
-                        <a href="#" class="info-btn live-btn d-inline-block mt-2">Live Demo</a>
+    <div class="row g-4" id="projects-wrapper">
+        <div class="col-md-6">
+            <div class="card h-100 project-card shadow-sm border-0">
+                <div class="project-img-container">
+                    <img src="images/project1.png" class="card-img-top" alt="Store Management System">
+                    <div class="project-overlay">
+                         <span class="badge bg-success">PHP & MySQL</span>
                     </div>
                 </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="card h-100 project-card shadow-sm border-0">
-                    <div class="project-img-container">
-                        <img src="images/project2.png" class="card-img-top" alt="AI Study Lab">
-                        <div class="project-overlay">
-                             <span class="badge bg-success">Laravel & AI</span>
-                        </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-dark">Store Management System</h4>
+                    <div class="tech-stacks mb-3">
+                        <span class="stack-item">Raw PHP</span>
+                        <span class="stack-item">MySQL</span>
+                        <span class="stack-item">Bootstrap</span>
                     </div>
-                    <div class="card-body p-4">
-                        <h4 class="card-title fw-bold text-dark">AI Study Lab</h4>
-                        <div class="tech-stacks mb-3">
-                            <span class="stack-item">Laravel</span>
-                            <span class="stack-item">Tailwind CSS</span>
-                            <span class="stack-item">Python API</span>
+                    <p class="card-text text-muted">একটি পূর্ণাঙ্গ ইনভেন্টরি সলিউশন যা ছোট দোকানের স্টক এবং হিসাব ম্যানেজ করতে সাহায্য করে।</p>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-4 pt-3 border-top">
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="#" class="info-btn live-btn text-decoration-none">Live Demo</a>
+                            <a href="#" target="_blank" class="text-muted text-decoration-none small">Repository</a>
                         </div>
-                        <p class="card-text text-muted">ইঞ্জিনিয়ারিং স্টুডেন্টদের জন্য একটি ভয়েস-অ্যাসিস্টেড ল্যাব প্ল্যাটফর্ম যা পড়া সহজ করে তোলে।</p>
-                        <a href="#" class="info-btn live-btn d-inline-block mt-2">Live Demo</a>
+                        <a href="project-details.html?id=store-management" class="btn btn-outline-success btn-sm px-3 fw-bold">Go Project</a>
                     </div>
                 </div>
             </div>
         </div>
-        
+
+        <div class="col-md-6">
+            <div class="card h-100 project-card shadow-sm border-0">
+                <div class="project-img-container">
+                    <img src="images/project2.png" class="card-img-top" alt="AI Study Lab">
+                    <div class="project-overlay">
+                         <span class="badge bg-success">Laravel & AI</span>
+                    </div>
+                </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-dark">AI Study Lab</h4>
+                    <div class="tech-stacks mb-3">
+                        <span class="stack-item">Laravel</span>
+                        <span class="stack-item">Tailwind CSS</span>
+                        <span class="stack-item">Python API</span>
+                    </div>
+                    <p class="card-text text-muted">ইঞ্জিনিয়ারিং স্টুডেন্টদের জন্য একটি ভয়েস-অ্যাসিস্টেড ল্যাব প্ল্যাটফর্ম যা পড়া সহজ করে তোলে।</p>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-4 pt-3 border-top">
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="#" class="info-btn live-btn text-decoration-none">Live Demo</a>
+                            <a href="#" target="_blank" class="text-muted text-decoration-none small">Repository</a>
+                        </div>
+                        <a href="project-details.html?id=ai-study-lab" class="btn btn-outline-success btn-sm px-3 fw-bold">বিস্তারিত দেখুন</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 extra-project d-none">
+            <div class="card h-100 project-card shadow-sm border-0">
+                <div class="project-img-container">
+                    <img src="images/project3.png" class="card-img-top" alt="Future Project">
+                </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-dark">Upcoming Project</h4>
+                    <p class="card-text text-muted">তোর নতুন কোনো প্রজেক্টের ডেসক্রিপশন এখানে দিবি।</p>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-4 pt-3 border-top">
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="#" class="info-btn live-btn text-decoration-none">Live Demo</a>
+                            <a href="#" target="_blank" class="text-muted text-decoration-none small">Repository</a>
+                        </div>
+                        <a href="project-details.html?id=future-project" class="btn btn-outline-success btn-sm px-3 fw-bold">বিস্তারিত দেখুন</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 extra-project d-none">
+            <div class="card h-100 project-card shadow-sm border-0">
+                <div class="project-img-container">
+                    <img src="images/project3.png" class="card-img-top" alt="Future Project">
+                </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-dark">Upcoming Project</h4>
+                    <p class="card-text text-muted">তোর নতুন কোনো প্রজেক্টের ডেসক্রিপশন এখানে দিবি।</p>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-4 pt-3 border-top">
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="#" class="info-btn live-btn text-decoration-none">Live Demo</a>
+                            <a href="#" target="_blank" class="text-muted text-decoration-none small">Repository</a>
+                        </div>
+                        <a href="project-details.html?id=future-project" class="btn btn-outline-success btn-sm px-3 fw-bold">বিস্তারিত দেখুন</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 extra-project d-none">
+            <div class="card h-100 project-card shadow-sm border-0">
+                <div class="project-img-container">
+                    <img src="images/project3.png" class="card-img-top" alt="Future Project">
+                </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-dark">Upcoming Project</h4>
+                    <p class="card-text text-muted">তোর নতুন কোনো প্রজেক্টের ডেসক্রিপশন এখানে দিবি।</p>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-4 pt-3 border-top">
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="#" class="info-btn live-btn text-decoration-none">Live Demo</a>
+                            <a href="#" target="_blank" class="text-muted text-decoration-none small">Repository</a>
+                        </div>
+                        <a href="project-details.html?id=future-project" class="btn btn-outline-success btn-sm px-3 fw-bold">বিস্তারিত দেখুন</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6 extra-project d-none">
+            <div class="card h-100 project-card shadow-sm border-0">
+                <div class="project-img-container">
+                    <img src="images/project3.png" class="card-img-top" alt="Future Project">
+                </div>
+                <div class="card-body p-4">
+                    <h4 class="card-title fw-bold text-dark">Upcoming Project</h4>
+                    <p class="card-text text-muted">তোর নতুন কোনো প্রজেক্টের ডেসক্রিপশন এখানে দিবি।</p>
+                    <div class="d-flex flex-wrap align-items-center justify-content-between gap-2 mt-4 pt-3 border-top">
+                        <div class="d-flex align-items-center gap-3">
+                            <a href="#" class="info-btn live-btn text-decoration-none">Live Demo</a>
+                            <a href="#" target="_blank" class="text-muted text-decoration-none small">Repository</a>
+                        </div>
+                        <a href="project-details.html?id=future-project" class="btn btn-outline-success btn-sm px-3 fw-bold">বিস্তারিত দেখুন</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <button id="see-more-btn" class="btn btn-success px-4 py-2 shadow-sm fw-bold">
+            See More
+        </button>
+    </div>
 </section>
 <!-- ---------------------------my skills section---------------------  -->
 <section id="skills" class="p-4">
