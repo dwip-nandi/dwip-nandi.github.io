@@ -298,66 +298,99 @@
 </section>
 <!-- ---------------------------my skills section---------------------  -->
 <section id="skills" class="p-4">
+    <h2 class="section-title p-3">Skills & Tools</h2>
 
-        <h2 class="section-title p-3">Skills & Tools</h2>
-
-        <div class="row g-4 justify-content-center">
-            <div class="col-6 col-md-3">
-                <div class="skill-card shadow">
-                    <i class="fas fa-copyright skill-icon"></i>
-                    <h5 class="skill-name">C Programming</h5>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="skill-card shadow">
-                    <i class="fas fa-code skill-icon"></i>
-                    <h5 class="skill-name">C++ Programming</h5>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="skill-card shadow">
-                    <i class="fab fa-html5 skill-icon"></i>
-                    <h5 class="skill-name">HTML5</h5>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="skill-card shadow">
-                    <i class="fab fa-css3-alt skill-icon"></i>
-                    <h5 class="skill-name">CSS3</h5>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="skill-card shadow">
-                    <i class="fab fa-php skill-icon"></i>
-                    <h5 class="skill-name">PHP & Laravel</h5>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="skill-card shadow">
-                    <i class="fab fa-js skill-icon"></i>
-                    <h5 class="skill-name">JavaScript</h5>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="skill-card shadow">
-                    <i class="fas fa-database skill-icon"></i>
-                    <h5 class="skill-name">MySQL</h5>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-3">
-                <div class="skill-card shadow">
-                    <i class="fab fa-git-alt skill-icon"></i>
-                    <h5 class="skill-name">Git</h5>
-                </div>
+    <div class="row g-4 justify-content-center" id="skills-container">
+        <div class="col-6 col-md-3">
+            <div class="skill-card shadow">
+                <i class="fas fa-copyright skill-icon"></i>
+                <h5 class="skill-name">C Programming</h5>
             </div>
         </div>
+
+        <div class="col-6 col-md-3">
+            <div class="skill-card shadow">
+                <i class="fas fa-code skill-icon"></i>
+                <h5 class="skill-name">C++ Programming</h5>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="skill-card shadow">
+                <i class="fab fa-html5 skill-icon"></i>
+                <h5 class="skill-name">HTML5</h5>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="skill-card shadow">
+                <i class="fab fa-css3-alt skill-icon"></i>
+                <h5 class="skill-name">CSS3</h5>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="skill-card shadow">
+                <i class="fab fa-php skill-icon"></i>
+                <h5 class="skill-name">PHP & Laravel</h5>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="skill-card shadow">
+                <i class="fab fa-js skill-icon"></i>
+                <h5 class="skill-name">JavaScript</h5>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="skill-card shadow">
+                <i class="fas fa-database skill-icon"></i>
+                <h5 class="skill-name">MySQL</h5>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3">
+            <div class="skill-card shadow">
+                <i class="fab fa-git-alt skill-icon"></i>
+                <h5 class="skill-name">Git</h5>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3 extra-skill d-none">
+            <div class="skill-card shadow">
+                <i class="fab fa-python skill-icon"></i>
+                <h5 class="skill-name">Python</h5>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3 extra-skill d-none">
+            <div class="skill-card shadow">
+                <i class="fab fa-bootstrap skill-icon"></i>
+                <h5 class="skill-name">Bootstrap</h5>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3 extra-skill d-none">
+            <div class="skill-card shadow">
+                <i class="fab fa-wordpress skill-icon"></i>
+                <h5 class="skill-name">WordPress</h5>
+            </div>
+        </div>
+
+        <div class="col-6 col-md-3 extra-skill d-none">
+            <div class="skill-card shadow">
+               <i class="fab fa-java skill-icon"></i>
+               <h5 class="skill-name">Java</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-5">
+        <button id="skills-toggle-btn" class="btn btn-sm px-4 py-2" style="border-color: #198754; color: #198754; font-weight: 600; border-radius: 6px; transition: all 0.3s ease-in-out;">
+            See More <i class="fas fa-chevron-down ms-1"></i>
+        </button>
+    </div>
 </section>
 <!-- -----------------------------------------resume section------------------ -->
 <section id="resume" class="p-4">
@@ -727,6 +760,7 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="contact_form.js"></script>
     <script src="js/project_see_more.js"></script>
+    <script src="js/slills_see_more.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
