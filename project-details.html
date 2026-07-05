@@ -219,25 +219,24 @@
 
     <script>
         document.getElementById('currentYear').textContent = new Date().getFullYear();
-
         const projectsData = {
             "store-management": {
                 title: "Stockify",
                 tech: ["PHP", "MySQL", "Bootstrap","JavaScript","HTML","CSS"],
                 desc: `Stockify is a dynamic, all-in-one store and inventory management system designed to effortlessly streamline operations for any business. Built with a focus on automation and user experience, it bridges the gap between merchants and customers through an intuitive dual-panel architecture. It features smart automation like barcode scanning for instantaneous sales and stock updates, alongside proactive notifications that alert the admin before a product runs out of stock or expires. With built-in analytical tools like Profit and Discount calendars, Stockify empowers business owners with data-driven insights while keeping customers engaged with real-time deals.
 
-Key Features:
-• Smart Barcode Scanning: Seamlessly add new items to the inventory and process sales instantly by simply scanning product barcodes.
+                Key Features:
+                   • Smart Barcode Scanning: Seamlessly add new items to the inventory and process sales instantly by simply scanning product barcodes.
 
-• Dynamic Stock & Expiry Control: Track inventory levels and expiration dates effortlessly, with automated notifications for low-stock items and options to dynamically remove expired products.
+                   • Dynamic Stock & Expiry Control: Track inventory levels and expiration dates effortlessly, with automated notifications for low-stock items and options to dynamically remove expired products.
 
-• Interactive Profit Calendar: A visual calendar dashboard that tracks daily and monthly revenue, displaying exact profit margins per product and overall business growth.
+                   • Interactive Profit Calendar: A visual calendar dashboard that tracks daily and monthly revenue, displaying exact profit margins per product and overall business growth.
 
-• Customer-Centric Discount Calendar: A dedicated public calendar where buyers can instantly check active deals, current discounts, and special offers of the day.
+                   • Customer-Centric Discount Calendar: A dedicated public calendar where buyers can instantly check active deals, current discounts, and special offers of the day.
 
-• Dual-Panel Architecture: Features a highly secure, login-protected Admin/Seller Panel for business management, and a hassle-free, login-free Customer Panel for buyers.
+                   • Dual-Panel Architecture: Features a highly secure, login-protected Admin/Seller Panel for business management, and a hassle-free, login-free Customer Panel for buyers.
 
-• Advanced Daily & Monthly Reporting: Generates comprehensive daily and monthly reports tracking total products added, items sold, and detailed financial performance.`,
+                   • Advanced Daily & Monthly Reporting: Generates comprehensive daily and monthly reports tracking total products added, items sold, and detailed financial performance.`,
                 screenshots: [
                     { src: "project_img/project1/screenshot1.png", caption: "Admin Login" }, 
                     { src: "project_img/project1/screenshot3.png", caption: "Product List for Customer" }, 
@@ -252,7 +251,30 @@ Key Features:
                 ],
                 videoUrl: "https://www.youtube.com/embed" 
             },
-            "ai-study-lab": {
+       
+            "next-gen-ai-platform": {
+                title: "Next-Gen AI Platform",
+                tech: ["Laravel", "Groq API", "Bootstrap CSS", "JavaScript", "HTML", "CSS"],
+                desc: `Next-Gen AI Platform is an advanced, AI-driven mock interview and interactive learning ecosystem engineered to help candidates and students master their viva preparations. Powered by Laravel and integrated with the ultra-fast Groq API, this platform delivers a highly responsive and realistic environment to simulate professional job interviews and academic labs. With full voice and text interaction capabilities, it bridges the gap between theoretical knowledge and real-time communication success.
+
+                Key Features:
+                  • Smart Admin & AI Training Panel: Allows administrators or instructors to pre-configure specialized fields, target sectors, or custom interview topics. It features advanced AI behavior prompting, enabling users to inject specific guidelines and custom datasets that train the AI to ask precise, context-aware questions during sessions.
+
+                  • Dynamic Interview Room (CV-Based Evaluation): An automated simulation chamber where candidates can dynamically upload their custom CVs to experience a tailored job interview. Users can type their answers to the AI's prompts, which are then analyzed in real-time to generate instant scores out of 10, highlight precise areas of improvement, and deliver an overall performance grade.
+
+                  • Interactive AI Study Lab (Voice & Text Interaction): A next-gen educational hub built for deep learning. Students can upload a document or type a specific topic, and the AI will read out the questions dynamically using Voice-to-Text and Text-to-Voice. Users can respond by either typing or talking directly, and the AI evaluates the logical accuracy and validity of their inputs instantly.`,
+                screenshots: [
+                  { src: "project_img/project2/project2.png", caption: "Next-Gen AI Platform Hub" }, 
+                  { src: "project_img/project2/screenshot5.png", caption: "Admin Panel & AI Training Settings" }, 
+                  { src: "project_img/project2/screenshot3.png", caption: "Interview Room - Dynamic CV Upload" }, 
+                  { src: "project_img/project2/screenshot1.png", caption: "AI Study Lab - Voice & Text Interaction" },
+                  { src: "project_img/project2/screenshot2.png", caption: "Result of Interview" },
+                  { src: "project_img/project2/screenshot4.png", caption: "Result & Analysis" }
+               ],
+               videoUrl: "https://www.youtube.com/embed/" 
+            }, 
+
+            "ai-study-aaaa": {
                 title: "AI Study Lab",
                 tech: ["Laravel", "Tailwind CSS", "Python API"],
                 desc: `ইঞ্জিনিয়ারিং স্টুডেন্টদের জন্য একটি আধুনিক ভয়েস-অ্যাসিস্টেড ল্যাব প্ল্যাটফর্ম যা জটিল টপিকগুলোকে সহজ করে তোলে। এই প্ল্যাটফর্মে এআই ভয়েস কমান্ডের মাধ্যমে বিভিন্ন ল্যাব এক্সপেরিমেন্টের গایدলাইন এবং সリューション সহজেই খুঁজে পাওয়া যায়।`,
@@ -262,6 +284,8 @@ Key Features:
                 ],
                 videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" 
             }
+
+
         };
 
         const urlParams = new URLSearchParams(window.location.search);
