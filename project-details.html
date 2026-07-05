@@ -94,9 +94,10 @@
             font-size: 1.05rem;
             line-height: 1.8;
             text-align: justify;
+            white-space: pre-line; /* নিউলাইন বা ব্রেকগুলো বজায় রাখার জন্য */
         }
 
-        /* প্রিমিয়াম টেকনোলজি ব্যাজ */
+        /* প্রিমিয়াম টেকনোলজি ব্যাজ */
         .tech-badge {
             background-color: rgba(25, 135, 84, 0.08) !important;
             color: #198754 !important;
@@ -220,21 +221,42 @@
 
         const projectsData = {
             "store-management": {
-                title: "Store Management System",
-                tech: ["Raw PHP", "MySQL", "Bootstrap"],
-                desc: "এটি একটি পূর্ণাঙ্গ ইনভেন্টরি সলিউশন যা ছোট ও মাঝারি দোকানের স্টক এবং বেচাকেনার হিসাব নিখুঁতভাবে ম্যানেজ করতে সাহায্য করে। এতে রয়েছে রিয়েল-টাইম স্টক অ্যালার্ট, কাস্টমার ইনভয়েস জেনারেটর এবং দৈনিক/মাসিক প্রফিট রিপোর্টিং সিস্টেম।",
+                title: "Stockify",
+                tech: ["PHP", "MySQL", "Bootstrap","JavaScript","HTML","CSS"],
+                desc: `Stockify is a dynamic, all-in-one store and inventory management system designed to effortlessly streamline operations for any business. Built with a focus on automation and user experience, it bridges the gap between merchants and customers through an intuitive dual-panel architecture. It features smart automation like barcode scanning for instantaneous sales and stock updates, alongside proactive notifications that alert the admin before a product runs out of stock or expires. With built-in analytical tools like Profit and Discount calendars, Stockify empowers business owners with data-driven insights while keeping customers engaged with real-time deals.
+
+Key Features:
+• Smart Barcode Scanning: Seamlessly add new items to the inventory and process sales instantly by simply scanning product barcodes.
+
+• Dynamic Stock & Expiry Control: Track inventory levels and expiration dates effortlessly, with automated notifications for low-stock items and options to dynamically remove expired products.
+
+• Interactive Profit Calendar: A visual calendar dashboard that tracks daily and monthly revenue, displaying exact profit margins per product and overall business growth.
+
+• Customer-Centric Discount Calendar: A dedicated public calendar where buyers can instantly check active deals, current discounts, and special offers of the day.
+
+• Dual-Panel Architecture: Features a highly secure, login-protected Admin/Seller Panel for business management, and a hassle-free, login-free Customer Panel for buyers.
+
+• Advanced Daily & Monthly Reporting: Generates comprehensive daily and monthly reports tracking total products added, items sold, and detailed financial performance.`,
                 screenshots: [
-                    { src: "images/project1.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
-                    { src: "images/project1_dashboard.png", caption: "স্টক এবং ইনভেন্টরি ট্র্যাকিং" }, 
-                    { src: "images/project1_reports.png", caption: "দৈনিক ও মাসিক সেলস রিপোর্ট" },
-                    { src: "images/project.jpg", caption: "ইউজার ম্যানেজমেন্ট ও পারমিশন" }
+                    { src: "project_img/project1/screenshot1.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    { src: "project_img/project1/screenshot2.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    { src: "project_img/project1/screenshot3.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    { src: "project_img/project1/screenshot4.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    { src: "project_img/project1/screenshot5.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    { src: "project_img/project1/screenshot6.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    { src: "project_img/project1/screenshot7.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    { src: "project_img/project1/screenshot8.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    { src: "project_img/project1/screenshot9.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    { src: "project_img/project1/screenshot10.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    { src: "project_img/project1/screenshot11.png", caption: "প্রধান ড্যাশবোর্ড ইন্টারফেস" }, 
+                    
                 ],
                 videoUrl: "https://www.youtube.com/embed/dQw4w9WgXcQ" 
             },
             "ai-study-lab": {
                 title: "AI Study Lab",
                 tech: ["Laravel", "Tailwind CSS", "Python API"],
-                desc: "ইঞ্জিনিয়ারিং স্টুডেন্টদের জন্য একটি আধুনিক ভয়েস-অ্যাসিস্টেড ল্যাব প্ল্যাটফর্ম যা জটিল টপিকগুলোকে সহজ করে তোলে। এই প্ল্যাটফর্মে এআই ভয়েস কমান্ডের মাধ্যমে বিভিন্ন ল্যাব এক্সপেরিমেন্টের গایدলাইন এবং সリューション সহজেই খুঁজে পাওয়া যায়।",
+                desc: `ইঞ্জিনিয়ারিং স্টুডেন্টদের জন্য একটি আধুনিক ভয়েস-অ্যাসিস্টেড ল্যাব প্ল্যাটফর্ম যা জটিল টপিকগুলোকে সহজ করে তোলে। এই প্ল্যাটফর্মে এআই ভয়েস কমান্ডের মাধ্যমে বিভিন্ন ল্যাব এক্সপেরিমেন্টের গایدলাইন এবং সリューション সহজেই খুঁজে পাওয়া যায়।`,
                 screenshots: [
                     { src: "images/project2.png", caption: "হোম পেজ ও এআই ইন্টারফেস" },
                     { src: "images/project2_lab.png", caption: "ভয়েস কমান্ড এক্সপেরিমেন্ট প্যানেল" }
