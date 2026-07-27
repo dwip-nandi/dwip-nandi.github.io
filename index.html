@@ -394,43 +394,64 @@
 </section>
 <!-- -----------------------------------------resume section------------------ -->
 <section id="resume" class="p-4">
-        <h2 class="section-title p-3">Resume</h2>
+    <h2 class="section-title p-3">Resume</h2>
 
-        <div class="row g-5">
-            <!-- Education Column -->
-            <div class="col-md-6">
-                <h3 class="mb-4" style="color: #198754;"><i class="fas fa-graduation-cap me-2"></i> Education</h3>
-                
-                <!-- Education Card 1 -->
+    <div class="row g-5">
+        <!-- Education Column (Unchanged) -->
+        <div class="col-md-6">
+            <h3 class="mb-4" style="color: #198754;"><i class="fas fa-graduation-cap me-2"></i> Education</h3>
+            
+            <!-- Education Card 1 -->
+            <div class="resume-card mb-4 shadow-sm">
+                <span class="resume-date">2022 - Present</span>
+                <h5 class="resume-degree">B.Sc. in Information and Communication Engineering (ICE)</h5>
+                <p class="resume-institute">University of Rajshahi</p>
+                <p class="resume-text">Currently pursuing a Bachelor’s degree in ICE, focusing on digital communication, network systems, and advanced software engineering. Actively involved in technical research and academic projects related to the field.</p>
+            </div>
+
+            <!-- Education Card 2 -->
+            <div class="resume-card shadow-sm">
+                <span class="resume-date">2019 - 2021</span>
+                <h5 class="resume-degree">Higher Secondary Certificate</h5>
+                <p class="resume-institute">Shahid Smriti Govt. Collage- Muktagacha </p>
+                <p class="resume-text">Completed the Higher Secondary Certificate in the Science stream with a perfect GPA of 5.00/5.00. Developed a strong foundation in Mathematics and Physics during this period.</p>
+            </div>
+        </div>
+
+        <!-- Experience Column (Updated with New Certifications & Pagination) -->
+        <div class="col-md-6">
+            <h3 class="mb-4" style="color: #198754;"><i class="fas fa-briefcase me-2"></i> Experience</h3>
+            
+            <!-- Page 1 Items (Latest Achievements) -->
+            <div class="exp-page exp-page-1">
+                <!-- New Item 1: Fixensy Industrial Training -->
                 <div class="resume-card mb-4 shadow-sm">
-                    <span class="resume-date">2022 - Present</span>
-                    <h5 class="resume-degree">B.Sc. in Information and Communication Engineering (ICE)</h5>
-                    <p class="resume-institute">University of Rajshahi</p>
-                    <p class="resume-text">Currently pursuing a Bachelor’s degree in ICE, focusing on digital communication, network systems, and advanced software engineering. Actively involved in technical research and academic projects related to the field.</p>
+                    <span class="resume-date">July 2026</span>
+                    <h5 class="resume-degree">Industrial Attachment Trainee</h5>
+                    <p class="resume-institute">FIXENSY (Hi-Tech Park, Rajshahi)</p>
+                    <p class="resume-text">Completed industrial training focusing on Data Annotation, Data QA, corporate time management, and real-life workflow optimization in an AI-focused environment.</p>
                 </div>
 
-                <!-- Education Card 2 -->
+                <!-- New Item 2: NSDA Level-6 AI Training -->
                 <div class="resume-card shadow-sm">
-                    <span class="resume-date">2019 - 2021</span>
-                    <h5 class="resume-degree">Higher Secondary Certificate</h5>
-                    <p class="resume-institute">Shahid Smriti Govt. Collage- Muktagacha </p>
-                    <p class="resume-text">Completed the Higher Secondary Certificate in the Science stream with a perfect GPA of 5.00/5.00. Developed a strong foundation in Mathematics and Physics during this period.</p>
+                    <span class="resume-date">2026 (360 Hours)</span>
+                    <h5 class="resume-degree">AI in Immersive Technology (Level-6)</h5>
+                    <p class="resume-institute">NSDA - Prime Minister's Office</p>
+                    <p class="resume-text">Completed 6-month specialized training covering Python development, Deep Learning model training, Immersive Technologies (AR/VR), and professional technical communication.</p>
                 </div>
             </div>
 
-            <!-- Experience Column -->
-            <div class="col-md-6">
-                <h3 class="mb-4" style="color: #198754;"><i class="fas fa-briefcase me-2"></i> Experience</h3>
-                
-                <!-- Experience Card 1 -->
+            <!-- Page 2 Items (Previous Experiences) -->
+            <div class="exp-page exp-page-2 d-none">
+                <!-- Item 3: Web Developer -->
                 <div class="resume-card mb-4 shadow-sm">
                     <span class="resume-date">2024 - Active</span>
                     <h5 class="resume-degree">Web Developer (Project Based)</h5>
                     <p class="resume-institute">Freelance / Local Clients</p>
-                    <p class="resume-text">Developing dynamic and responsive web applications using PHP, Laravel, and MySQL,WordPress(CMS). Utilizing modern front-end tools like Tailwind CSS and Bootstrap to deliver high-quality user experiences for local and international clients.</p>
+                    <p class="resume-text">Developing dynamic and responsive web applications using PHP, Laravel, and MySQL, WordPress(CMS). Utilizing modern front-end tools like Tailwind CSS and Bootstrap to deliver high-quality user experiences for local and international clients.</p>
                 </div>
 
-                <!-- Experience Card 2 -->
+                <!-- Item 4: AI & ML Research Intern -->
                 <div class="resume-card shadow-sm">
                     <span class="resume-date">2023 - 2024</span>
                     <h5 class="resume-degree">AI & ML Research Intern (or Trainee)</h5>
@@ -438,14 +459,25 @@
                     <p class="resume-text">Gained hands-on experience in the software development lifecycle with a focus on Artificial Intelligence and Machine Learning. Worked on implementing computer vision models using MediaPipe and analyzing datasets for predictive modeling.</p>
                 </div>
             </div>
-        </div>
 
-        <!-- Download CV Button -->
-        <div class="text-center mt-5">
-            <a href="https://drive.google.com/file/d/1e4uKSXv7GxzXlhFZa64pJRPSwA0h1TLo/view?usp=drive_link" target="_blank" rel="noopener noreferrer"  class="btn btn-resume-download shadow">
-                <i class="fas fa-download me-2"></i> Download CV
-            </a>
+            <!-- Pagination Buttons -->
+            <div class="d-flex justify-content-center mt-4">
+                <nav aria-label="Experience Pagination">
+                    <ul class="pagination pagination-sm exp-pagination">
+                        <li class="page-item active"><button class="page-link" onclick="changeExpPage(1)">1</button></li>
+                        <li class="page-item"><button class="page-link" onclick="changeExpPage(2)">2</button></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
+    </div>
+
+    <!-- Download CV Button -->
+    <div class="text-center mt-5">
+        <a href="https://drive.google.com/file/d/1e4uKSXv7GxzXlhFZa64pJRPSwA0h1TLo/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="btn btn-resume-download shadow">
+            <i class="fas fa-download me-2"></i> Download CV
+        </a>
+    </div>
 </section>
 <!-- --------------------------contact me section--------------- -->
 <section id="contact" class="p-4" style="background-color: #f0f4f2;">

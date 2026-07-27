@@ -637,7 +637,6 @@ section {
     }
 }
 /* -----------------------------resume section-------------------------- */
-/* রেজুমে সেকশন ব্যাকগ্রাউন্ড */
 #resume {
     background-color: #ffffff; /* ক্লিন হোয়াইট */
     padding: 80px 0;
@@ -731,8 +730,30 @@ section {
     right: -6px;
     background-color: #146c43; /* পেছনের লেয়ার গাঢ় সবুজ */
 }
+/* Pagination Styling in the experience section under resume */
+.exp-pagination .page-link {
+    color: #198754;
+    border-color: #198754;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 6px;
+    margin: 0 3px;
+    box-shadow: none;
+}
 
-/* ডাউনলোড বাটন */
+.exp-pagination .page-item.active .page-link {
+    background-color: #198754;
+    border-color: #198754;
+    color: #fff;
+}
+
+.exp-pagination .page-link:hover {
+    background-color: #146c43;
+    border-color: #146c43;
+    color: #fff;
+}
+
+/* Downloade button */
 .btn-resume-download {
     background-color: #198754;
     color: #ffffff;

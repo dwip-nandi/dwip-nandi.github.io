@@ -103,3 +103,27 @@ function showInfo(type, element) {
     buttons.forEach(btn => btn.classList.remove('active'));
     element.classList.add('active');
 }
+
+// --------------------Experience Pagination under Resume section-------------
+function changeExpPage(pageNumber) {
+    // Hide all pages
+    document.querySelectorAll('.exp-page').forEach(page => {
+        page.classList.add('d-none');
+    });
+
+    // Show the selected page
+    const selectedPage = document.querySelector(`.exp-page-${pageNumber}`);
+    if (selectedPage) {
+        selectedPage.classList.remove('d-none');
+    }
+
+    // Update pagination active state
+    const pageItems = document.querySelectorAll('.exp-pagination .page-item');
+    pageItems.forEach((item, index) => {
+        if (index + 1 === pageNumber) {
+            item.classList.add('active');
+        } else {
+            item.classList.remove('active');
+        }
+    });
+} 
